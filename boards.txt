@@ -1,0 +1,62 @@
+# Copyright (c) 2014-2017 Arduino LLC.  All right reserved.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+# 5G-NB-IoT (Native USB Port)
+# --------------------------------------
+5G-NB-IoT.name=5G-NB-IoT (Native USB Port)
+5G-NB-IoT.vid.0=0x2341
+5G-NB-IoT.pid.0=0x804d
+5G-NB-IoT.vid.1=0x2341
+5G-NB-IoT.pid.1=0x004d
+
+5G-NB-IoT.vid.2=0x2341
+5G-NB-IoT.pid.2=0x824d
+# If the board is a 2341:824d use 2341:824d for build and set other parameters as well
+5G-NB-IoT.vid.2.build.vid=0x2341
+5G-NB-IoT.vid.2.build.pid=0x824d
+5G-NB-IoT.vid.2.build.usb_product="5G-NB-IoT"
+5G-NB-IoT.vid.2.bootloader.file=5G-NB-IoT/5G_NB_IoT_sam_ba.hex
+
+5G-NB-IoT.vid.3=0x2341
+5G-NB-IoT.pid.3=0x024d
+# If the board is a 2341:024d use 2341:824d for build and set other parameters as well
+5G-NB-IoT.vid.3.build.vid=0x2341
+5G-NB-IoT.vid.3.build.pid=0x824d
+5G-NB-IoT.vid.3.build.usb_product="5G-NB-IoT"
+5G-NB-IoT.vid.3.bootloader.file=5G-NB-IoT/5G_NB_IoT_sam_ba.hex
+
+5G-NB-IoT.upload.tool=bossac
+5G-NB-IoT.upload.protocol=sam-ba
+5G-NB-IoT.upload.maximum_size=262144
+5G-NB-IoT.upload.use_1200bps_touch=true
+5G-NB-IoT.upload.wait_for_upload_port=true
+5G-NB-IoT.upload.native_usb=true
+5G-NB-IoT.build.mcu=cortex-m0plus
+5G-NB-IoT.build.f_cpu=48000000L
+5G-NB-IoT.build.usb_product="5G-NB-IoT"
+5G-NB-IoT.build.usb_manufacturer="Arduino LLC"
+5G-NB-IoT.build.board=SAMD_ZERO
+5G-NB-IoT.build.core=arduino
+5G-NB-IoT.build.extra_flags=-D__SAMD21G18A__ {build.usb_flags}
+5G-NB-IoT.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+5G-NB-IoT.build.openocdscript=openocd_scripts/arduino_zero.cfg
+5G-NB-IoT.build.variant=arduino_zero
+5G-NB-IoT.build.variant_system_lib=
+5G-NB-IoT.build.vid=0x2341
+5G-NB-IoT.build.pid=0x804d
+5G-NB-IoT.bootloader.tool=openocd
+5G-NB-IoT.bootloader.file=5G-NB-IoT/5G_NB_IoT_sam_ba.hex
+
